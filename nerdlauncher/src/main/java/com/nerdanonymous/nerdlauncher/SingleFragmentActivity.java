@@ -1,4 +1,4 @@
-package com.nerd.criminalintent;
+package com.nerdanonymous.nerdlauncher;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;

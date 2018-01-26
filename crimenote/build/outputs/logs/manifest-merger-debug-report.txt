@@ -3,6 +3,8 @@ manifest
 ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:3:11-44
+		INJECTED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml
+		INJECTED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml
 		INJECTED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml

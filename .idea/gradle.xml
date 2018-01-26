@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/beatbox" />
             <option value="$PROJECT_DIR$/crimenote" />
+            <option value="$PROJECT_DIR$/nerdlauncher" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

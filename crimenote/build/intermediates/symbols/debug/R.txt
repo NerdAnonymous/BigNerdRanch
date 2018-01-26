@@ -755,8 +755,8 @@ int layout abc_search_dropdown_item_icons_2line 0x7f040017
 int layout abc_search_view 0x7f040018
 int layout abc_select_dialog_material 0x7f040019
 int layout activity_crime_pager 0x7f04001a
-int layout activity_fragment 0x7f04001b
 int layout activity_masterdetail 0x7f04002f
+int layout activity_singlefragment 0x7f04001b
 int layout activity_twopane 0x7f04001c
 int layout dialog_date 0x7f04001d
 int layout dialog_image_zoom 0x7f04001e
