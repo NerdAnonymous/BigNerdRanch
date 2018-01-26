@@ -1,0 +1,77 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:2:1-32:12
+	package
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:3:11-44
+	android:versionName
+		INJECTED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml
+		INJECTED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml
+		INJECTED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:5:5-7:37
+	android:maxSdkVersion
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:7:9-35
+	android:name
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:6:9-65
+uses-feature#android.hardware.camera2
+ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:9:5-11:35
+	android:required
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:11:9-33
+	android:name
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:10:9-48
+application
+ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:13:5-30:19
+	android:label
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:16:9-41
+	android:allowBackup
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:14:9-35
+	android:icon
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:15:9-43
+	android:theme
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:17:9-40
+activity#com.nerd.criminalintent.CrimeListActivity
+ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:18:9-23:20
+	android:name
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:18:19-52
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:19:13-22:29
+action#android.intent.action.MAIN
+ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:20:17-68
+	android:name
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:21:17-76
+	android:name
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:21:27-74
+activity#com.nerd.criminalintent.CrimePagerActivity
+ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:24:9-26:62
+	android:parentActivityName
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:26:13-60
+	android:name
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:25:13-47
+activity#com.nerd.criminalintent.DatePickerActivity
+ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:27:9-29:55
+	android:theme
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:29:13-53
+	android:name
+		ADDED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml:28:13-47
+uses-sdk
+INJECTED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/nerd/.android/build-cache/d89fe29b8395144f7ad847540403a24eeb006c26/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /Users/nerd/.android/build-cache/6dea742ed68d30b7b48d9f9117fe87e9ccfbe631/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /Users/nerd/.android/build-cache/7452df9a995c2f5d658ee78c80c5231e6cd2f2e9/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /Users/nerd/.android/build-cache/6b1dce6455ba0058269616561afb133496817715/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /Users/nerd/.android/build-cache/eaab9b7174b45e65a02fc0278fad52c3c2e2b024/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /Users/nerd/.android/build-cache/bd80c334b34bcf9dbb32e69e22ee74e026c758e9/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /Users/nerd/.android/build-cache/3aa766e684f6b5a27920242864abea90140c4e14/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /Users/nerd/.android/build-cache/3e244afeed9a1718d855a83ece992fec92f10b88/output/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/nerd/.android/build-cache/7fa9e8c3dd7690b56e50863063112962c9132117/output/AndroidManifest.xml:20:5-22:41
+	android:targetSdkVersion
+		ADDED from [android.arch.lifecycle:runtime:1.0.3] /Users/nerd/.android/build-cache/7fa9e8c3dd7690b56e50863063112962c9132117/output/AndroidManifest.xml:22:9-38
+	android:minSdkVersion
+		INJECTED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml
+		INJECTED from /Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/AndroidManifest.xml

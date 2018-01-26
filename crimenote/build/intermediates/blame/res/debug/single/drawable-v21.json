@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/nerd/.android/build-cache/d89fe29b8395144f7ad847540403a24eeb006c26/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/nerd/.android/build-cache/d89fe29b8395144f7ad847540403a24eeb006c26/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/nerd/.android/build-cache/3e244afeed9a1718d855a83ece992fec92f10b88/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/nerd/.android/build-cache/d89fe29b8395144f7ad847540403a24eeb006c26/output/res/drawable-v21/abc_btn_colored_material.xml"
+    }
+]

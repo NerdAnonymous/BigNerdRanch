@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/menu/fragment_crime_list.xml",
+        "source": "/Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/res/menu/fragment_crime_list.xml"
+    },
+    {
+        "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/menu/fragment_crime.xml",
+        "source": "/Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/res/menu/fragment_crime.xml"
+    }
+]

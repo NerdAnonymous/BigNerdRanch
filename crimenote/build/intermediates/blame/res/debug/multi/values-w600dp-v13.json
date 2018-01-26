@@ -1,0 +1,45 @@
+[
+    {
+        "outputFile": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w600dp-v13/values-w600dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 49,
+                    "endOffset": 100
+                },
+                "from": {
+                    "file": "/Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/res/values-w600dp/refs.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 140,
+                        "endColumn": 49,
+                        "endOffset": 185
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 84,
+                    "endOffset": 185
+                },
+                "from": {
+                    "file": "/Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/res/values-w600dp/refs.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 84,
+                        "endOffset": 135
+                    }
+                }
+            }
+        ]
+    }
+]

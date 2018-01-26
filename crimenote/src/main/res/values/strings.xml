@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">CriminalIntent</string>
+    <string name="crime_title_hint">Enter a title for crime</string>
+    <string name="crime_title_label">Title</string>
+    <string name="crime_detail_label">Detail</string>
+    <string name="crime_solved_label">Solved</string>
+    <string name="date_picker_title">Date Of Crime</string>
+    <string name="new_crime">New Crime</string>
+    <string name="remove_crime">Remove Crime</string>
+    <string name="show_subtitle">Show Subtitle</string>
+    <string name="hide_subtitle">Hide Subtitle</string>
+    <string name="no_crime">No Crime</string>
+    <string name="crime_suspect_text">Choose Suspect</string>
+    <string name="crime_report_text">Send Crime Report</string>
+    <string name="crime_call_text">Call Crime</string>
+    <string name="crime_report">%1$s!
+        The crime was discovered on %2$s, %3$s, and %4$s
+    </string>
+    <string name="crime_report_solved">The case is solved</string>
+    <string name="crime_report_unsolved">The case not solved</string>
+    <string name="crime_report_no_suspect">there is no suspect.</string>
+    <string name="crime_report_suspect">the suspect is %s.</string>
+    <string name="crime_report_subject">CrimeIntent Crime Report</string>
+    <string name="send_report">Send Crime report</string>
+
+    <!--中文状态下只支持ONE和OTHER-->
+    <plurals name="subtitle_plural">
+        <item quantity="one">%d crime</item>
+        <item quantity="other">%d 个条目</item>
+    </plurals>
+
+</resources>

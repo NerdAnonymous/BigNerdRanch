@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/nerd/.android/build-cache/3e244afeed9a1718d855a83ece992fec92f10b88/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/nerd/.android/build-cache/3e244afeed9a1718d855a83ece992fec92f10b88/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/nerd/.android/build-cache/3e244afeed9a1718d855a83ece992fec92f10b88/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/nerd/.android/build-cache/3e244afeed9a1718d855a83ece992fec92f10b88/output/res/layout-v21/notification_action_tombstone.xml"
+    }
+]

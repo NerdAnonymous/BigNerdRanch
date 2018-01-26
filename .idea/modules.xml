@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BigNerdRanch.iml" filepath="$PROJECT_DIR$/BigNerdRanch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/beatbox/beatbox.iml" filepath="$PROJECT_DIR$/beatbox/beatbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crimenote/crimenote.iml" filepath="$PROJECT_DIR$/crimenote/crimenote.iml" />
+    </modules>
+  </component>
+</project>
