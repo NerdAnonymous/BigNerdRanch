@@ -37,7 +37,7 @@ import java.util.UUID;
 public class CrimeFragment extends Fragment {
 
     private static final String AGR_CRIME_ID = "crime_id";
-    private static final String DIALOG_DATE = "DialogDate";
+    private static final String DIALOG_DATE = "dialog_date";
 
     private static final int REQUEST_DATE = 0;
     private static final int REQUEST_CONTACT_NAME = 1;
