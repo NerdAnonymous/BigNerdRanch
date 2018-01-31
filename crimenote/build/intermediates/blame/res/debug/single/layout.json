@@ -156,12 +156,12 @@
         "source": "/Users/nerd/.android/build-cache/d89fe29b8395144f7ad847540403a24eeb006c26/output/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
-        "source": "/Users/nerd/.android/build-cache/d89fe29b8395144f7ad847540403a24eeb006c26/output/res/layout/abc_search_view.xml"
-    },
-    {
         "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/layout/activity_singlefragment.xml",
         "source": "/Users/nerd/Downloads/BigNerdRanch/crimenote/src/main/res/layout/activity_singlefragment.xml"
+    },
+    {
+        "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/Users/nerd/.android/build-cache/d89fe29b8395144f7ad847540403a24eeb006c26/output/res/layout/abc_search_view.xml"
     },
     {
         "merged": "/Users/nerd/Downloads/BigNerdRanch/crimenote/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
