@@ -1,9 +1,15 @@
 package com.nerdanonymous.photogallery;
 
+import android.annotation.SuppressLint;
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -126,6 +132,8 @@ public class PhotoGalleryFragment extends Fragment implements LoaderManager.Load
         mLoaderManager = getLoaderManager();
         mLoaderManager.initLoader(0, null, this);
 
+        setupJobService();
+
         Handler responseHandler = new Handler();
         mThumbnailDownloader = new ThumbnailDownloader<>(responseHandler);
         mThumbnailDownloader.setThumbnailDownloadListener(new ThumbnailDownloader.ThumbnailDownloadListener<PhotoHolder>() {
@@ -138,6 +146,20 @@ public class PhotoGalleryFragment extends Fragment implements LoaderManager.Load
         mThumbnailDownloader.start();
         mThumbnailDownloader.getLooper();
         Log.i(TAG, "Background thread started");
+    }
+
+    @SuppressLint("NewApi")
+    private void setupJobService() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            JobScheduler scheduler = (JobScheduler) getActivity().getSystemService(Context.JOB_SCHEDULER_SERVICE);
+            JobInfo.Builder jobInfo = new JobInfo.Builder(1, new ComponentName(getActivity(), PollService.class));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                jobInfo.setPeriodic(JobInfo.getMinPeriodMillis());
+            } else {
+                jobInfo.setPeriodic(3000);
+            }
+            scheduler.schedule(jobInfo.build());
+        }
     }
 
     @Override
@@ -192,6 +214,13 @@ public class PhotoGalleryFragment extends Fragment implements LoaderManager.Load
                 searchView.setQueryHint(TextUtils.isEmpty(query) ? null : query);
             }
         });
+
+        MenuItem toggleItem = menu.findItem(R.id.menu_item_toggle_polling);
+        if (PollServiceCompat.isServiceAlarmOn(getActivity())) {
+            toggleItem.setTitle(R.string.stop_polling);
+        } else {
+            toggleItem.setTitle(R.string.start_polling);
+        }
     }
 
     @Override
@@ -200,6 +229,11 @@ public class PhotoGalleryFragment extends Fragment implements LoaderManager.Load
             case R.id.menu_item_clear:
                 QueryPreferences.setStoredQuery(getActivity(), null);
                 updateItems();
+                return true;
+            case R.id.menu_item_toggle_polling:
+                boolean shouldStartAlarm = !PollServiceCompat.isServiceAlarmOn(getActivity());
+                PollServiceCompat.setServiceAlarm(getActivity(), shouldStartAlarm);
+                getActivity().invalidateOptionsMenu();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -249,14 +283,12 @@ public class PhotoGalleryFragment extends Fragment implements LoaderManager.Load
             }
         }
 
-        if (null != getActivity()) {
-            getActivity().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    mProgressBar.setVisibility(View.VISIBLE);
-                }
-            });
-        }
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mProgressBar.setVisibility(View.VISIBLE);
+            }
+        });
 
         return fetchItemsLoader;
     }
