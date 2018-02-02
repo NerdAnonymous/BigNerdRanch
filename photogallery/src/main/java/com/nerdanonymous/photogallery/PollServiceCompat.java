@@ -6,6 +6,9 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -13,6 +16,7 @@ import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.text.TextUtils;
@@ -26,12 +30,21 @@ public class PollServiceCompat extends IntentService {
     private static final int NOTIFY_ID = 1;
     private static final String NOTIFY_CHANEL_ID = PollServiceCompat.class.getName();
     private static final long POLL_INTERVAL = AlarmManager.INTERVAL_FIFTEEN_MINUTES;
+    private static final int JOB_SERVICE_ID = 1;
 
     public static Intent newIntent(Context context) {
         return new Intent(context, PollServiceCompat.class);
     }
 
-    public static void setServiceAlarm(Context context, boolean isOn) {
+    public static void setService(Context context, boolean isOn) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            setJobService(context, isOn);
+        } else {
+            setAlarmService(context, isOn);
+        }
+    }
+
+    public static void setAlarmService(Context context, boolean isOn) {
         Intent service = PollServiceCompat.newIntent(context);
         PendingIntent pendingIntent = PendingIntent.getService(context, 0, service, 0);
 
@@ -44,6 +57,29 @@ public class PollServiceCompat extends IntentService {
         } else {
             alarmManager.cancel(pendingIntent);
             pendingIntent.cancel();
+        }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    private static void setJobService(Context context, boolean isOn) {
+        JobScheduler scheduler = (JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE);
+
+        if (isOn) {
+            JobInfo.Builder jobInfo = new JobInfo.Builder(JOB_SERVICE_ID, new ComponentName(context, PollService.class));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                jobInfo.setPeriodic(JobInfo.getMinPeriodMillis());
+            } else {
+                jobInfo.setPeriodic(3000);
+            }
+            scheduler.schedule(jobInfo.build());
+        } else {
+            List<JobInfo> schedulerJobs = scheduler.getAllPendingJobs();
+            for (JobInfo jobInfo : schedulerJobs) {
+                if (JOB_SERVICE_ID == jobInfo.getId()) {
+                    scheduler.cancel(JOB_SERVICE_ID);
+                    break;
+                }
+            }
         }
     }
 
