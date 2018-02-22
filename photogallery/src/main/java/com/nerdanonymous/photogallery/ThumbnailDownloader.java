@@ -90,7 +90,7 @@ public class ThumbnailDownloader<T> extends HandlerThread {
     }
 
     public void preloadImage(String url) {
-        mResponseHandler.obtainMessage(MESSAGE_PRELOAD, url)
+        mRequestHandler.obtainMessage(MESSAGE_PRELOAD, url)
                 .sendToTarget();
     }
 
@@ -102,8 +102,8 @@ public class ThumbnailDownloader<T> extends HandlerThread {
      * That means that there is a memory leak. The activity is being leaked.
      */
     public void clearQueue() {
-        mResponseHandler.removeMessages(MESSAGE_DOWNLOAD);
-        mResponseHandler.removeMessages(MESSAGE_PRELOAD);
+        mRequestHandler.removeMessages(MESSAGE_DOWNLOAD);
+        mRequestHandler.removeMessages(MESSAGE_PRELOAD);
         mRequestMap.clear();
     }
 

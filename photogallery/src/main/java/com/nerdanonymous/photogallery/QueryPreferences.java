@@ -7,6 +7,7 @@ public class QueryPreferences {
 
     private static final String PREF_SEARCH_QUERY = "search_query";
     private static final String PREF_LAST_RESULT_ID = "last_result_id";
+    private static final String PREF_IS_SERVICE_ON = "is_service_on";
 
     public static String getStoredQuery(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
@@ -29,6 +30,18 @@ public class QueryPreferences {
         PreferenceManager.getDefaultSharedPreferences(context)
                 .edit()
                 .putString(PREF_LAST_RESULT_ID, resultId)
+                .apply();
+    }
+
+    public static boolean isServiceOn(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(PREF_IS_SERVICE_ON, false);
+    }
+
+    public static void setServiceOn(Context context, boolean isOn) {
+        PreferenceManager.getDefaultSharedPreferences(context)
+                .edit()
+                .putBoolean(PREF_IS_SERVICE_ON, isOn)
                 .apply();
     }
 }

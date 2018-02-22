@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
@@ -37,7 +36,7 @@ import java.util.concurrent.TimeUnit;
  * 使用AsyncTaskLoader代替AsyncTask，是为了保证设备在配置改变时（旋转）反复请求的问题！
  * 当然，使用AsyncTask+Fragment可使用setRetainInstance(true)解决。
  */
-public class PhotoGalleryFragment extends Fragment implements LoaderManager.LoaderCallbacks<List<GalleryItem>> {
+public class PhotoGalleryFragment extends VisibleFragment implements LoaderManager.LoaderCallbacks<List<GalleryItem>> {
 
     private static final String TAG = PhotoGalleryFragment.class.getSimpleName();
     private static final String ARG_PAGE_NUMBER = "page_number";
@@ -194,7 +193,7 @@ public class PhotoGalleryFragment extends Fragment implements LoaderManager.Load
         });
 
         MenuItem toggleItem = menu.findItem(R.id.menu_item_toggle_polling);
-        if (PollServiceCompat.isServiceAlarmOn(getActivity())) {
+        if (AlarmService.isServiceAlarmOn(getActivity())) {
             toggleItem.setTitle(R.string.stop_polling);
         } else {
             toggleItem.setTitle(R.string.start_polling);
@@ -209,8 +208,8 @@ public class PhotoGalleryFragment extends Fragment implements LoaderManager.Load
                 updateItems();
                 return true;
             case R.id.menu_item_toggle_polling:
-                boolean shouldStartAlarm = !PollServiceCompat.isServiceAlarmOn(getActivity());
-                PollServiceCompat.setService(getActivity(), shouldStartAlarm);
+                boolean shouldStartAlarm = !AlarmService.isServiceAlarmOn(getActivity());
+                AlarmService.setService(getActivity(), shouldStartAlarm);
                 getActivity().invalidateOptionsMenu();
                 return true;
             default:

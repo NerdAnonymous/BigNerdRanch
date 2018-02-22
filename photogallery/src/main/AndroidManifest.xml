@@ -2,10 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.nerdanonymous.photogallery">
 
+    <permission
+        android:name="com.nerdanonymous.photogallery.PRIVATE"
+        android:protectionLevel="signature"/>
+
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.nerdanonymous.photogallery.PRIVATE"/>
 
     <application
         android:allowBackup="true"
@@ -23,11 +29,25 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".PollServiceCompat"/>
+        <service android:name=".AlarmService"/>
 
         <service
             android:name=".PollService"
             android:permission="android.permission.BIND_JOB_SERVICE"/>
+
+        <receiver android:name=".StartupReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".NotificationReceiver"
+            android:exported="false">
+            <intent-filter android:priority="-999">
+                <action android:name="com.nerdanonymous.photogallery.SHOW_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
 
     </application>
 
