@@ -1,6 +1,7 @@
 package com.nerdanonymous.photogallery;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -63,8 +64,10 @@ public class PhotoGalleryFragment extends VisibleFragment implements LoaderManag
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_photo_gallery, container, false);
+
         mProgressBar = view.findViewById(R.id.photo_gallery_progress_bar);
         mPhotoRecyclerView = view.findViewById(R.id.photo_gallery_recycle_view);
         mPhotoRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), DEFAULT_SPAN_COUNT));
@@ -289,18 +292,29 @@ public class PhotoGalleryFragment extends VisibleFragment implements LoaderManag
         Log.i(TAG, "onLoaderReset");
     }
 
-    private class PhotoHolder extends RecyclerView.ViewHolder {
+    private class PhotoHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private ImageView mItemImageView;
+        private GalleryItem mGalleryItem;
 
         public PhotoHolder(View itemView) {
             super(itemView);
 
             mItemImageView = itemView.findViewById(R.id.photo_gallery_image_view);
+            itemView.setOnClickListener(this);
         }
 
         public void bindDrawable(Drawable drawable) {
             mItemImageView.setImageDrawable(drawable);
+        }
+
+        public void bindGalleryItem(GalleryItem galleryItem) {
+            mGalleryItem = galleryItem;
+        }
+
+        @Override
+        public void onClick(View v) {
+            startActivity(PhotoPageActivity.newIntent(getActivity(), mGalleryItem.getPhotoPageUri()));
         }
     }
 
@@ -326,6 +340,7 @@ public class PhotoGalleryFragment extends VisibleFragment implements LoaderManag
         @Override
         public void onBindViewHolder(PhotoHolder holder, int position) {
             GalleryItem galleryItem = mGalleryItems.get(position);
+            holder.bindGalleryItem(galleryItem);
             Drawable placeHolder = getResources().getDrawable(R.mipmap.ic_launcher);
             holder.bindDrawable(placeHolder);
             mThumbnailDownloader.queueThumbnail(holder, galleryItem.getUrl());
