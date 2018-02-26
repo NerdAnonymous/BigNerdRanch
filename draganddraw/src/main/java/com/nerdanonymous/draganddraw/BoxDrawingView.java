@@ -2,14 +2,12 @@ package com.nerdanonymous.draganddraw;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -19,7 +17,6 @@ import java.util.List;
 
 public class BoxDrawingView extends View {
 
-    private static final String TAG = BoxDrawingView.class.getSimpleName();
     private static final String PARENT_STATE_KEY = "parent_state_key";
     private static final String BOXES_STATE_KEY = "boxes_state_key";
 
