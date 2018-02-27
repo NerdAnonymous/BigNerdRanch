@@ -5,7 +5,7 @@ android {
     buildToolsVersion "27.0.2"
 
     defaultConfig {
-        applicationId "com.nerdanonymous.nerdlauncher"
+        applicationId "com.nerdanonymous.photogallery"
         minSdkVersion 16
         versionCode 1
         versionName "1.0"

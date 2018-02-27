@@ -10,8 +10,10 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/beatbox" />
             <option value="$PROJECT_DIR$/crimenote" />
+            <option value="$PROJECT_DIR$/draganddraw" />
             <option value="$PROJECT_DIR$/nerdlauncher" />
             <option value="$PROJECT_DIR$/photogallery" />
+            <option value="$PROJECT_DIR$/sunset" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

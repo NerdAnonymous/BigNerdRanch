@@ -5,8 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/BigNerdRanch.iml" filepath="$PROJECT_DIR$/BigNerdRanch.iml" />
       <module fileurl="file://$PROJECT_DIR$/beatbox/beatbox.iml" filepath="$PROJECT_DIR$/beatbox/beatbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/crimenote/crimenote.iml" filepath="$PROJECT_DIR$/crimenote/crimenote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/draganddraw/draganddraw.iml" filepath="$PROJECT_DIR$/draganddraw/draganddraw.iml" />
       <module fileurl="file://$PROJECT_DIR$/nerdlauncher/nerdlauncher.iml" filepath="$PROJECT_DIR$/nerdlauncher/nerdlauncher.iml" />
       <module fileurl="file://$PROJECT_DIR$/photogallery/photogallery.iml" filepath="$PROJECT_DIR$/photogallery/photogallery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sunset/sunset.iml" filepath="$PROJECT_DIR$/sunset/sunset.iml" />
     </modules>
   </component>
 </project>
