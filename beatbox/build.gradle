@@ -9,10 +9,27 @@ android {
         minSdkVersion 16
         versionCode 1
         versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true;
     }
 }
 
 dependencies {
     compile 'com.android.support:appcompat-v7:27.0.2'
     compile 'com.android.support:recyclerview-v7:27.0.2'
+    compile 'com.android.support:support-v4:27.0.2'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:2.2.1'
+    testCompile 'org.hamcrest:hamcrest-junit:2.0.0.0'
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.+') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.+'){
+        exclude group: 'com.android.support'
+    }
 }
